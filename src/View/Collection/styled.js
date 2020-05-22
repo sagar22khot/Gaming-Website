@@ -8,13 +8,13 @@ const Wrapper = styled.div``;
 
 const CollectionWrapper = styled.div`
   position: absolute;
-  width: calc(100% - 300px);
-  height: calc(100% - 200px);
+  width: calc(100% - 250px);
+  height: calc(100% - 250px);
   // bottom: 10%;
   top: 50%;
   left: 50%;
   transform: translateX(-50%)  translateY(-50%);
-  overflow: scroll;
+  overflow: hidden;
   position: absolute:
   bottom: 0%;
   // border: 1px solid white;
@@ -32,9 +32,9 @@ const CollectionWrapper = styled.div`
 
 const Game = styled.div`
   position: relative;
-  width: 100%;
-  height: 100%;
-  // text-align: center;
+  width: 90%;
+  margin: 5% 5%;
+  height: 90%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -56,6 +56,7 @@ const GameWallpaper = styled.div`
 const GameTitle = styled.h4`
   color: white;
   font-family: "Lobster", cursive;
+  font-size: 20px;
   @media screen and (min-width: 1400px) and (max-width: 2000px) {
     font-size: 20px;
   }
@@ -69,7 +70,7 @@ const GameTitle = styled.h4`
 const GameDesc = styled.h4`
   color: white;
   font-family: "Oswald", sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   @media screen and (max-width: 999px) {
     font-size: 12px;
   }
@@ -83,6 +84,7 @@ const GameDetails = styled.div`
   background-color: black;
   text-align: center;
   bottom: 0%;
+  // border: 1px solid red;
 `;
 const PreviousButton = styled.div`
   display: ${props => (props.visible < 2 ? "none" : "inline-block")};
@@ -147,7 +149,6 @@ const HiddenDetails = styled.div`
 
 const GameWrap = styled.div`
   background-color: transparent;
-
   perspective: 1000px;
   display: inline-block;
   float: left;
@@ -181,6 +182,13 @@ const KnowMoreLink = styled(Link)`
   animation: 5s ${animationfadeIn};
 `;
 
+const TempWrap = styled.div`
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+`;
+
 export {
   Wrapper,
   CollectionWrapper,
@@ -193,5 +201,6 @@ export {
   GameDesc,
   HiddenDetails,
   GameWrap,
-  KnowMoreLink
+  KnowMoreLink,
+  TempWrap
 };

@@ -17,7 +17,8 @@ import {
   GameDesc,
   HiddenDetails,
   GameWrap,
-  KnowMoreLink
+  KnowMoreLink,
+  TempWrap
 } from "./styled";
 const axios = require("axios");
 
@@ -82,9 +83,12 @@ class Collection extends React.Component {
                   <GameWallpaper
                     imagesrc={data.background_image}></GameWallpaper>
                   <GameDetails>
+                    <TempWrap>
                     <GameTitle>{data.name}</GameTitle>
                     <GameDesc>Rating: {data.rating}</GameDesc>
                     <GameDesc>Release: {data.released}</GameDesc>
+                    </TempWrap>
+                    
                   </GameDetails>
                   <HiddenDetails>
                     <KnowMoreLink

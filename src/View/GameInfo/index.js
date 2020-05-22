@@ -18,7 +18,8 @@ import {
   DepcriptionPara,
   GeneralAnchor,
   InfoWrapper,
-  InnerDivRight
+  InnerDivRight,
+  TempWrap
 } from "./styled";
 import { types } from "util";
 import BurgerButton from "../../Component/BurgerButton";
@@ -134,7 +135,10 @@ export class GameInfo extends Component {
                           .setAttribute("style", "background-color: #663f0d;")
                     )
                   }>
-                  {val}
+                    <TempWrap>
+                    {val}
+                    </TempWrap>
+                 
                 </GeneralAnchor>
               </MenuItems>
             ))}
@@ -238,7 +242,7 @@ export class GameInfo extends Component {
               externalTrigger: undefined
             });
         }, 3000000)} */}
-        <SiteInfo></SiteInfo>
+        {/* <SiteInfo></SiteInfo> */}
       </Wrapper>
     );
   }

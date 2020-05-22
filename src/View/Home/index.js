@@ -18,7 +18,6 @@ class App extends React.Component {
         <HomeContent>
           <HomeTitle>Welcome!</HomeTitle>
           <HomeDesc>Your one stop to the latest collection of games</HomeDesc>
-          <HomeDesc>Upcoming Games</HomeDesc>
           <Carousel></Carousel>
         </HomeContent>
       </Wrapper>

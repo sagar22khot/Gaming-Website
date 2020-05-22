@@ -20,19 +20,20 @@ const ImageBackground = styled.div`
 
 const HomeContent = styled.div`
   position: absolute;
-  padding: 20px;
-  right: 5%;
+  // padding: 20px;
+  right: 10%;
   top: 50%;
+  width: 50%;
   transform: translateY(-50%);
   // border: 1px solid white;
-  animation: 1s ${bounceAnimation};
+  // animation: 1s ${bounceAnimation};
 `;
 
 const HomeTitle = styled.h1`
   font-family: "Audiowide", cursive;
   color: grey;
   text-align: center;
-  font-size: 45px;
+  font-size: 70px;
   font-weight: bold;
 `;
 
@@ -40,7 +41,7 @@ const HomeDesc = styled.p`
   font-family: "McLaren", cursive;
   color: grey;
   padding: 10px 40px 40px;
-  font-size: 20px;
+  font-size: 40px;
   text-align: center;
   max-width: 800px;
   position: relative;

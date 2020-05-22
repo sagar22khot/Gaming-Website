@@ -4,14 +4,15 @@ const Wrapper = styled.div`
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 1100px;
+  // width: 1100px;
+  width: 100%;
   // height: 200px;
   // border: 1px solid green;
 `;
 
 const SlideWindow = styled.div`
-  width: 720px;
-  height: 200px;
+  width: 1200px;
+  height: 300px;
   // border: 1px solid red;
   position: relative;
   left: 50%;
@@ -20,18 +21,18 @@ const SlideWindow = styled.div`
 `;
 
 const SliderDataWrapper = styled.div`
-  width: 2400px;
-  height: 200px;
+  width: 4000px;
+  height: 300px;
   // border: 2px solid red;
-  position: relative;
+  position: absolute;
   left: ${props => props.currentCardPosition}px;
   transition: left 300ms linear;
 `;
 
 const SliderData = styled.div`
   display: inline-block;
-  width: 240px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
 `;
 
 const Content = styled.div`
@@ -60,7 +61,7 @@ const RightArrow = styled.div`
   height: 100px;
   background-color: transparent;
   position: absolute;
-  right: 150px;
+  right: 0px;
   bottom: 50%;
   transform: translateY(50%);
   z-index: 10;
@@ -80,7 +81,7 @@ const LeftArrow = styled.div`
   height: 100px;
   background-color: transparent;
   position: absolute;
-  left: 150px;
+  // left: 150px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;

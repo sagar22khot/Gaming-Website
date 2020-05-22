@@ -25,7 +25,7 @@ const NavbarLink = styled(NavLink)`
   margin-right: 15px;
   color: white;
   height: 100%;
-  width: 100px;
+  width: 150px;
   -webkit-tap-highlight-color: transparent;
   &:focus {
     outline: none;
@@ -44,11 +44,12 @@ const MenuHeader = styled.h4`
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
+  font-size: 15px;
 `;
 
 const Slider = styled.div`
   height: 40px;
-  width: 100px;
+  width: 150px;
   display: block;
   position: relative;
   top: 50%;

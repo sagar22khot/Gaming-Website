@@ -36,11 +36,11 @@ export class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentCardPosition: -720,
+      currentCardPosition: -1200,
       selectedSlide: 4,
       hiddenDivToggle: false
     };
-    this.slideWidth = 240;
+    this.slideWidth = 400;
   }
 
   toggleSlide = direction => {

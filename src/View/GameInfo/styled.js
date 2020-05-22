@@ -9,20 +9,13 @@ const Wrapper = styled.div`
  * Left Div ********************************************
  */
 const LeftDiv = styled.div`
-  width: ${props => (props.toggleDivHide ? 20 : 0)}%;
-  height: calc(100% - 70px);
+  border-radius: 20px;
+  width: ${props => (props.toggleDivHide ? 30 : 0)}%;
+  height: calc(100% - 200px);
   position: absolute;
-  // top: 50%;
-  bottom: 0%;
-  left: 0%;
+  top: 50%;
   opacity: 0.9;
-  // transform: translateY(-50%);
-  background: linear-gradient(
-    45deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(105, 99, 98, 1) 100%,
-    rgba(254, 196, 148, 0.8813900560224089) 100%
-  );
+  transform: translateY(-50%);
   transition: width 100ms linear;
   @media screen and (min-width: 1400px) and (max-width: 2000px) {
     // font-size: 22px;
@@ -38,14 +31,14 @@ const LeftDiv = styled.div`
   }
 `;
 const InnerDiv = styled.div`
-  width: 100%;
+  border-radius: 20px;
+  width: 60%;
   height: 100%;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   background-color: black;
-  overflow: scroll;
 `;
 const MenuItems = styled.div`
   width: 100%;
@@ -59,7 +52,8 @@ const GeneralAnchor = styled.a`
   color: white;
   text-decoration: none;
   display: block;
-  width: 50%;
+  width: 40%;
+  height: 30%;
   padding: 10px;
   &:hover {
     background-color: grey;
@@ -95,15 +89,15 @@ const GeneralAnchor = styled.a`
  * Right Div ********************************************
  */
 const RightDiv = styled.div`
-  width: ${props => (props.toggleDivHide ? 80 : 100)}%;
-  height: calc(100% - 70px);
+  width: ${props => (props.toggleDivHide ? 70 : 100)}%;
+  height: calc(100% - 200px);
   position: absolute;
-  // top: 50%;
-  bottom: 0%;
+  top: 50%;
   right: 0%;
-  opacity: 0.9;
-  // transform: translateY(-50%);
-  background-color: black;
+  float: right;
+  opacity: 0.9
+  display: inline-block;
+  transform: translateY(-50%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -119,16 +113,21 @@ const RightDiv = styled.div`
   }
 `;
 const InnerDivRight = styled.div`
-  width: 90%;
+  width: 85%;
   height: 90%;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background-color: #5e320e;
+  background-color: black;
   padding: 1.5%;
   overflow: scroll;
-  border-radius: 10px;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  border-radius: 20px;
+  ::-webkit-scrollbar {
+    display: none;
+}
 `;
 const InfoTitle = styled.h3`
   padding: 2%;
@@ -186,6 +185,8 @@ const DepcriptionPara = styled.p`
   text-align: justify;
   padding: 2%;
   margin-top: 5%;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
   @media screen and (min-width: 1400px) and (max-width: 2000px) {
     font-size: 22px;
   }
@@ -200,6 +201,9 @@ const DepcriptionPara = styled.p`
   border-radius: 20px;
   white-space: normal;
   box-shadow: 10px 15px 8px black;
+  ::-webkit-scrollbar {
+    display: none;
+}
 `;
 const InfoWrapper = styled.div`
   margin-top: 5%;
@@ -213,7 +217,6 @@ const InfoWrapper = styled.div`
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 10px 10px 8px black;
-  overflow: scroll;
   @media screen and (min-width: 1400px) and (max-width: 2000px) {
     // font-size: 22px;
   }
@@ -283,6 +286,13 @@ const InnerInfo = styled.p`
   }
 `;
 
+const TempWrap = styled.div`
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+`;
+
 export {
   Wrapper,
   LeftDiv,
@@ -299,5 +309,6 @@ export {
   DisplayWrapper,
   DepcriptionPara,
   GeneralAnchor,
-  InfoWrapper
+  InfoWrapper,
+  TempWrap
 };
